@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    
+    <h2>Statistical Summary</h2>
+    <pre>{{ results['basic_stats'] }}</pre>
+    
+    <h2>Correlation Matrix</h2>
+    <pre>{{ results['correlation_matrix'] }}</pre>
+    
+    <h2>T-Test Results</h2>
+    <p>T-Statistic: {{ results['ttest_results']['t_statistic'] }}</p>
+    <p>P-Value: {{ results['ttest_results']['p_value'] }}</p>
+    
+    <h2>Regression Coefficients</h2>
+    <pre>{{ results['regression_coefficients'] }}</pre>
+    <p>R-squared: {{ results['model_r2'] }}</p>
+    
+    <h2>Generated Visualizations</h2>
+    <img src="{{ image_path }}" alt="Generated Visualizations">
+    
+    <br><br>
+    <a href="/">Go Back</a>
+</body>
+</html>
